@@ -32,13 +32,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ScrollListTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-
-                }
+                    AffirmationApp()
             }
         }
     }
@@ -89,5 +83,5 @@ fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier){
 @Preview(showBackground = true)
 @Composable
 fun Preview() {
-        AffirmationCard(Affirmation(R.string.affirmation1, R.drawable.image1))
+    AffirmationApp()
 }
